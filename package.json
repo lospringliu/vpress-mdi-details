@@ -1,0 +1,19 @@
+{
+  "name": "vpress-mdi-details",
+  "version": "1.0.0",
+  "description": "markdown-it plugin for details in vitepress",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": ["vitepress", "markdown-it", "plugin", "details"],
+  "author": "lospringliu@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "markdown-it-container": "^3.0.0"
+  },
+  "devDependencies": {
+    "jest": "^26.1.0",
+    "markdown-it": "^11.0.0"
+  }
+}
