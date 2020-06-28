@@ -1,9 +1,17 @@
 # vitepress markdown for `details` and `mermaid`
 
+## steps
+1. use mpress-mdi-details.details
+2. use mpress-mdi-details.mermaid
+3. load mermadjs in Layout
+4. mermaid.init in enhanceApp
+
 ## containers
 
 ::: tip
+
 This is a tip
+
 :::
 
 ## mermaid
@@ -17,10 +25,14 @@ pie title Pets adopted by volunteers
 ```
 :::
 
+### flowchart
+
 ```mermaid
 graph LR
     A-->B
 ```
+
+### pie chart
 
 ```mermaid
 pie title Pets adopted by volunteers
