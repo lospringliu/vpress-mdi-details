@@ -6,7 +6,7 @@
 3. load mermadjs in Layout
 4. mermaid.init in enhanceApp
 
-## containers
+## containers - tip
 
 ::: tip
 
@@ -14,9 +14,9 @@ This is a tip
 
 :::
 
-## mermaid
+## containers - details
 
-::: details code use mermaid as language
+::: details code use `mermaid` as language
 ```
 pie title Pets adopted by volunteers
     "Dogs" : 386
@@ -24,6 +24,8 @@ pie title Pets adopted by volunteers
     "Rats" : 15
 ```
 :::
+
+## mermaid
 
 ### flowchart
 
