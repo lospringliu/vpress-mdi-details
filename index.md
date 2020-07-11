@@ -19,26 +19,32 @@ This is a tip
 ::: details code use `mermaid` as language
 ```
 pie title Pets adopted by volunteers
-    "Dogs" : 386
-    "Cats" : 85
-    "Rats" : 15
 ```
 :::
 
-## mermaid
+## mermaids
 
-### flowchart
+### graphs fence
+
+```mermaid
+graph TB
+    T-->B
+```
 
 ```mermaid
 graph LR
-    A-->B
+    L-->R
 ```
-
-### pie chart
 
 ```mermaid
-pie title Pets adopted by volunteers
-    "Dogs" : 386
-    "Cats" : 85
-    "Rats" : 15
+graph BT
+    B-->T
 ```
+
+```mermaid
+graph RL
+    R-->L
+```
+
+### graphs component
+<mermaid />

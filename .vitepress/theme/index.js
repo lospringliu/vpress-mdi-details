@@ -11,8 +11,13 @@ const theme = {
         // app is the Vue 3 app instance from createApp()
         // router is VitePress' custom router (see `lib/app/router.js`)
         // siteData is a ref of current site-level metadata.
-        // console.log(app)
         console.log("... enhanceing App")
+        console.log(app.config.globalProperties.$site)
+        console.log(app.config.globalProperties.$page)
+        console.log(app.config.globalProperties.$theme)
+        console.log(siteData.value)
+        console.log(router.route)
+        console.log(app)
         // import("https://unpkg.com/mermaid/dist/mermaid.min.js")
 		// try {
         //   import("mermaid/dist/mermaid.min").then(() => {
