@@ -1,6 +1,6 @@
 {
   "name": "vpress-mdi-details",
-  "version": "1.1.4",
+  "version": "1.1.6",
   "description": "markdown-it plugins for vitepress",
   "main": "index.js",
   "scripts": {
@@ -17,11 +17,11 @@
   "license": "ISC",
   "dependencies": {
     "hash-sum": "^2.0.0",
+    "markdown-it": "^11.0.0",
     "markdown-it-container": "^3.0.0"
   },
   "devDependencies": {
     "jest": "^26.1.0",
-    "markdown-it": "^11.0.0",
     "mermaid": "^8.5.2",
     "vitepress": "^0.4.0"
   }

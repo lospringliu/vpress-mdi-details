@@ -1,8 +1,9 @@
 const hash = require('hash-sum')
+const escapeHtml = require("markdown-it/lib/common/utils").escapeHtml
 
 const wrap = (code) => {
   // return `<div><pre><code class="mermaid">${code}</code></pre></div>`
-  return `<div><pre class="mermaid">${code}</pre></div>`
+  return `<div><pre class="mermaid">${escapeHtml(code)}</pre></div>`
 }
 
 function details (md) {
@@ -44,11 +45,7 @@ function mermaid (md, options={}) {
 
 	function mermaidRender (tokens, idx, options, env, self) {
 		const token = tokens[idx]
-		const key = `mermaid_${hash(idx)}`
 		const { content } = token
-		console.log(content)
-		console.log(md.data)
-		// return `<Mermaid id="${key}" graph="${content}"></Mermaid>`
 		return wrap(content)
 	}
 	// Finds mermaid sections in the Markdown and creates context
@@ -150,11 +147,11 @@ function mermaid (md, options={}) {
 		return true
 	}
 
-	// md.block.ruler.before('fence', 'mermaid', mermaidReplacer, {
-	// 	alt: ['paragraph', 'reference', 'blockquote', 'list']
-	// })
+	md.block.ruler.before('fence', 'mermaid', mermaidReplacer, {
+		alt: ['paragraph', 'reference', 'blockquote', 'list']
+	})
 
-	// md.renderer.rules.mermaid = mermaidRender
+	md.renderer.rules.mermaid = mermaidRender
 }
 
 // from vuepress-plugin-mermaid
@@ -184,7 +181,7 @@ function mermaidjs (md, options = {}) {
   // Takes the context of the parsed section and turns in into a Mermaid component
   function mermaidRender (tokens, idx, options, env, self) {
     const token = tokens[idx]
-    const key = `mermaid_${hash(idx)}`
+    // const key = `mermaid_${hash(idx)}`
     const { content } = token
 	console.log(content)
     // md.$dataBlock[key] = content
